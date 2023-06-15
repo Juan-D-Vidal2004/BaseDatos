@@ -20,11 +20,8 @@ interface   UsuarioDao {
     @Query("update usuario set first_name =:name, `last_name ` =:apellido where uid=:id")
     suspend fun actualizarUsuarios(name:String,apellido:String,id:Int)
 
-    //@Delete
-    //suspend fun delete(user: kotlin.Int)
 
     @Query("delete from usuario where uid=:id")
     suspend fun eliminar(id: Int)
 
-    //@Query("delate from ")
 }
